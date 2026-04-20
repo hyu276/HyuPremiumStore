@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyu Premium Shop - Phần Mềm Bản Quyền & Tài Khoản Số</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/628033340_122096548239247617_6314601345223995563_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=6F7GqKiygL0Q7kNvwFRsUcC&_nc_oc=AdoYjRyYSsrgkAuaWOnPGiLd2ss9zuSWaFvb2YhyPbA7z2ls0Vh5uAX_Fj3GwUleX7A&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=8u1iTspMix-zgQ4DblqGBA&_nc_ss=7a3a8&oh=00_Af2lHLJ4VLytrxJBlGgqaiFCodsPnf0Dsj9wlPigbn45PA&oe=69EBE299">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .gradient-text {
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .category-scroll::-webkit-scrollbar { height: 4px; }
+        .category-scroll::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        .category-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .category-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        .accordion-content { transition: max-height 0.3s ease-in-out, padding 0.3s ease; max-height: 0; overflow: hidden; }
+        .accordion-content.open { max-height: 500px; padding-bottom: 1rem; }
+        
+        .site-logo {
+            height: 42px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#2563eb', secondary: '#4f46e5', accent: '#f43f5e' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <img src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/628033340_122096548239247617_6314601345223995563_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=6F7GqKiygL0Q7kNvwFRsUcC&_nc_oc=AdoYjRyYSsrgkAuaWOnPGiLd2ss9zuSWaFvb2YhyPbA7z2ls0Vh5uAX_Fj3GwUleX7A&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=8u1iTspMix-zgQ4DblqGBA&_nc_ss=7a3a8&oh=00_Af2lHLJ4VLytrxJBlGgqaiFCodsPnf0Dsj9wlPigbn45PA&oe=69EBE299" 
+                         alt="Hyu Premium Shop Logo" 
+                         class="site-logo shadow-sm">
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Hyu <span class="text-primary">Premium Shop</span></span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#products" class="text-slate-600 hover:text-primary font-medium transition text-sm">Danh Mục</a>
+                    <a href="#faq" class="text-slate-600 hover:text-primary font-medium transition text-sm">Hỏi Đáp</a>
+                    <a href="#" class="text-slate-600 hover:text-primary font-medium transition text-sm">Liên Hệ</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-primary hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-semibold transition text-sm flex items-center gap-2">
+                        <i class="fas fa-user-circle"></i>
+                        Đăng nhập
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-slate-900 text-white overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-slate-900 to-purple-600/10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24 relative z-10 text-center md:text-left">
+            <div class="max-w-3xl">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-500/20 text-blue-300 text-xs font-bold mb-4 border border-blue-500/30 uppercase tracking-widest">BẢNG GIÁ CHATGPT CẬP NHẬT MỚI NHẤT</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                    Trải Nghiệm <span class="gradient-text">ChatGPT Plus</span> <br/> Phân Khúc Đa Dạng
+                </h1>
+                <p class="text-lg text-slate-400 mb-10 leading-relaxed">
+                    Hyu Premium Shop cung cấp các giải pháp nâng cấp ChatGPT Plus và Business chính chủ, tối ưu chi phí theo nhu cầu sử dụng của bạn.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a href="#products" class="bg-primary hover:bg-blue-600 text-white font-bold px-8 py-4 rounded-xl transition shadow-lg shadow-blue-500/30 flex items-center gap-2">
+                        <i class="fas fa-shopping-bag"></i> Xem Các Sản Phẩm
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section id="products" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                <div class="max-w-xl">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-3">Danh Mục Sản Phẩm</h2>
+                    <p class="text-slate-500">Lựa chọn gói dịch vụ và mức giá phù hợp nhất.</p>
+                </div>
+                
+                <!-- Horizontal Scroll Categories -->
+                <div class="w-full md:w-auto overflow-hidden">
+                    <div class="category-scroll flex overflow-x-auto gap-2 p-1 bg-slate-100 rounded-xl whitespace-nowrap">
+                        <button onclick="filterProducts('all', this)" class="filter-btn active px-5 py-2 bg-white text-primary shadow-sm rounded-lg text-sm font-bold transition">Tất cả</button>
+                        <button onclick="filterProducts('AI', this)" class="filter-btn px-5 py-2 text-slate-500 hover:text-primary rounded-lg text-sm font-bold transition">AI</button>
+                        <button onclick="filterProducts('Design', this)" class="filter-btn px-5 py-2 text-slate-500 hover:text-primary rounded-lg text-sm font-bold transition">Thiết kế</button>
+                        <button onclick="filterProducts('Study', this)" class="filter-btn px-5 py-2 text-slate-500 hover:text-primary rounded-lg text-sm font-bold transition">Học tập</button>
+                        <button onclick="filterProducts('Work', this)" class="filter-btn px-5 py-2 text-slate-500 hover:text-primary rounded-lg text-sm font-bold transition">Làm việc</button>
+                        <button onclick="filterProducts('Entertainment', this)" class="filter-btn px-5 py-2 text-slate-500 hover:text-primary rounded-lg text-sm font-bold transition">Giải trí</button>
+                        <button onclick="filterProducts('VPN', this)" class="filter-btn px-5 py-2 text-slate-500 hover:text-primary rounded-lg text-sm font-bold transition">VPN</button>
+                        <button onclick="filterProducts('Game', this)" class="filter-btn px-5 py-2 text-slate-500 hover:text-primary rounded-lg text-sm font-bold transition">Game</button>
+                        <button onclick="filterProducts('Social', this)" class="filter-btn px-5 py-2 text-slate-500 hover:text-primary rounded-lg text-sm font-bold transition">Mạng xã hội</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 min-h-[400px]">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Câu Hỏi Thường Gặp</h2>
+                <p class="text-slate-500 font-medium">Giải đáp thắc mắc về quy trình mua hàng và bảo mật</p>
+            </div>
+            
+            <div class="space-y-4 text-left">
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-md transition">
+                    <button class="w-full text-left px-6 py-5 font-bold text-slate-800 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        Hyu Premium Shop cung cấp dịch vụ gì?
+                        <i class="fas fa-plus text-primary text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
+                        Chúng tôi chuyên cung cấp dịch vụ đăng ký hộ và phân phối các loại tài khoản phần mềm bản quyền (AI, Cloud, Design, Học tập). Chúng tôi giúp bạn sở hữu các dịch vụ quốc tế một cách dễ dàng với chi phí rẻ nhất.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-md transition">
+                    <button class="w-full text-left px-6 py-5 font-bold text-slate-800 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        Thời gian bàn giao sản phẩm là bao lâu?
+                        <i class="fas fa-plus text-primary text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-6 text-slate-600 text-sm leading-relaxed">
+                        Thông thường tài khoản sẽ được bàn giao trong vòng 15-30 phút sau khi thanh toán thành công trong giờ làm việc (9:00 - 23:00). Các đơn hàng ngoài giờ sẽ được xử lý vào sáng hôm sau.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center justify-center md:justify-start gap-3 mb-6 text-white">
+                    <img src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/628033340_122096548239247617_6314601345223995563_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=6F7GqKiygL0Q7kNvwFRsUcC&_nc_oc=AdoYjRyYSsrgkAuaWOnPGiLd2ss9zuSWaFvb2YhyPbA7z2ls0Vh5uAX_Fj3GwUleX7A&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=8u1iTspMix-zgQ4DblqGBA&_nc_ss=7a3a8&oh=00_Af2lHLJ4VLytrxJBlGgqaiFCodsPnf0Dsj9wlPigbn45PA&oe=69EBE299" 
+                         alt="Hyu Premium Shop Footer Logo" 
+                         class="h-10 w-auto rounded-lg">
+                    <span class="font-bold text-xl text-white">Hyu <span class="text-primary">Premium Shop</span></span>
+                </div>
+                <p class="text-sm leading-relaxed mb-6">Đối tác tin cậy cung cấp tài khoản số và phần mềm bản quyền hàng đầu Việt Nam.</p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Sản Phẩm AI</h4>
+                <ul class="space-y-3 text-sm font-medium">
+                    <li><a href="#" class="hover:text-primary transition">ChatGPT Plus</a></li>
+                    <li><a href="#" class="hover:text-primary transition">ChatGPT Business</a></li>
+                    <li><a href="#" class="hover:text-primary transition">Gemini Pro</a></li>
+                    <li><a href="#" class="hover:text-primary transition">Cursor Pro</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Hỗ Trợ</h4>
+                <ul class="space-y-3 text-sm font-medium">
+                    <li><a href="#" class="hover:text-primary transition">Điều khoản dịch vụ</a></li>
+                    <li><a href="#" class="hover:text-primary transition">Chính sách bảo hành</a></li>
+                    <li><a href="#" class="hover:text-primary transition">Quy định đổi trả</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase text-xs tracking-widest">Liên Hệ</h4>
+                <div class="space-y-4 text-sm flex flex-col items-center md:items-start">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-phone-alt text-primary"></i>
+                        <span class="text-white font-bold">1900 633 305</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-clock text-primary"></i>
+                        <span>9:00 - 23:00 (Tất cả các ngày)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-slate-800 text-center text-xs">
+            <p>Copyright © 2024 Hyu Premium Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div id="product-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div id="modal-container" class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl relative z-10 overflow-hidden transform transition-all">
+            <!-- Modal Content Injected Here -->
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="toast" class="fixed bottom-8 right-8 z-[110] hidden bg-slate-900 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-4 transition-all">
+        <i class="fas fa-check-circle text-green-400"></i>
+        <span id="toast-msg">Sản phẩm đã được chọn!</span>
+    </div>
+
+    <script>
+        const allProducts = [
+            { 
+                id: 1, 
+                name: "ChatGPT", 
+                cat: "AI", 
+                icon: "fa-robot",
+                desc: "Gói cao cấp từ OpenAI. Bao gồm phân khúc ChatGPT Plus và Plus Business (Pro model).",
+                isTiered: true, // Custom flag to handle unified view
+                sections: [
+                    {
+                        title: "I. ChatGPT Plus - Giá gốc 500k trên app",
+                        notes: [
+                            "1 & 2: Hết tháng cấp tài khoản mới, tài khoản cũ về free & không gia hạn thêm.",
+                            "3: Bảo hành trọn vẹn hiệu lực gói nhưng không bảo hành tài khoản."
+                        ],
+                        variants: [
+                            { label: "1. Dùng chung (Shared Account)", price: "60.000đ/tháng" },
+                            { label: "2. Dùng riêng (Đăng nhập tự do, đổi pass)", price: "100.000đ/tháng" },
+                            { label: "3. Nâng cấp chính chủ (Chưa từng có Plus)", price: "150.000đ/tháng" },
+                            { label: "3. Nâng cấp chính chủ (Đã từng có Plus)", price: "250.000đ/tháng" },
+                            { label: "Mua liền tháng 2 & 3", price: "240.000đ/tháng" },
+                            { label: "Mua liền từ tháng thứ 4", price: "225.000đ/tháng" }
+                        ]
+                    },
+                    {
+                        title: "II. ChatGPT Plus Business - Có model Pro 5 (Gốc 640k)",
+                        notes: [
+                            "Hết tháng tự mất lịch sử chat có trong thời gian sử dụng gói này.",
+                            "Lịch sử chat trước đó (nếu có) không bị mất."
+                        ],
+                        variants: [
+                            { label: "Nâng cấp chính chủ tháng đầu", price: "300.000đ/tháng" },
+                            { label: "Mua liền tháng 2 & 3", price: "270.000đ/tháng" },
+                            { label: "Mua liền từ tháng thứ 4", price: "250.000đ/tháng" }
+                        ]
+                    }
+                ]
+            },
+            { 
+                id: 2, name: "Cursor Pro", cat: "AI", icon: "fa-code",
+                desc: "Editor AI mạnh mẽ nhất cho lập trình viên chuyên nghiệp.",
+                variants: [
+                    { label: "Gói Pro 1 tháng", price: "450.000đ" },
+                    { label: "Gói Pro 1 năm", price: "3.000.000đ" }
+                ]
+            },
+            { 
+                id: 11, name: "Perplexity Pro", cat: "AI", icon: "fa-search",
+                desc: "Tìm kiếm AI thông minh nhất hiện nay.",
+                variants: [
+                    { label: "Gói Pro 1 tháng", price: "450.000đ" },
+                    { label: "Gói Pro 1 năm", price: "4.500.000đ" }
+                ]
+            },
+            { 
+                id: 12, name: "Super Grok", cat: "AI", icon: "fa-x-twitter",
+                desc: "AI tích hợp mạng xã hội X với tốc độ xử lý tức thì.",
+                variants: [
+                    { label: "Gói Premium 1 tháng", price: "300.000đ" },
+                    { label: "Gói Premium+ 1 tháng", price: "500.000đ" }
+                ]
+            },
+            { 
+                id: 13, name: "Gemini Pro", cat: "AI", icon: "fa-google",
+                desc: "Google One AI Pro với 2TB lưu trữ và Gemini Advanced.",
+                variants: [
+                    { label: "Gia hạn 1 tháng", price: "200.000đ" },
+                    { label: "Gia hạn 1 năm", price: "1.200.000đ" }
+                ]
+            },
+            { 
+                id: 15, name: "Elevenlabs", cat: "AI", icon: "fa-microphone-lines",
+                desc: "Chuyển đổi văn bản thành giọng nói chân thực.",
+                variants: [
+                    { label: "Gói Starter", price: "200.000đ" },
+                    { label: "Gói Creator", price: "550.000đ" }
+                ]
+            },
+            { 
+                id: 16, name: "KlingAI", cat: "AI", icon: "fa-film",
+                desc: "Tạo video AI chất lượng cao từ text.",
+                variants: [
+                    { label: "Gói Standard", price: "350.000đ" },
+                    { label: "Gói Pro", price: "850.000đ" }
+                ]
+            },
+            { 
+                id: 17, name: "Suno", cat: "AI", icon: "fa-music",
+                desc: "Sáng tác nhạc AI chỉ trong vài giây.",
+                variants: [
+                    { label: "Gói Pro", price: "250.000đ" },
+                    { label: "Gói Premier", price: "650.000đ" }
+                ]
+            },
+            { 
+                id: 3, name: "Canva Pro", cat: "Design", icon: "fa-paint-brush",
+                desc: "Thiết kế đồ họa chuyên nghiệp dễ dàng.",
+                variants: [
+                    { label: "Nâng cấp 1 tháng", price: "25.000đ" },
+                    { label: "Gói 1 năm", price: "99.000đ" },
+                    { label: "Vĩnh viễn", price: "299.000đ" }
+                ]
+            },
+            { 
+                id: 4, name: "Duolingo Max", cat: "Study", icon: "fa-language",
+                desc: "Học ngoại ngữ với sự trợ giúp của AI.",
+                variants: [
+                    { label: "Super 1 năm", price: "390.000đ" },
+                    { label: "Max 1 năm", price: "649.000đ" }
+                ]
+            },
+            { 
+                id: 6, name: "Netflix 4K", cat: "Entertainment", icon: "fa-film",
+                desc: "Xem phim chất lượng cao nhất.",
+                variants: [
+                    { label: "Xem chung 1 tháng", price: "65.000đ" },
+                    { label: "Gói riêng 1 tháng", price: "260.000đ" }
+                ]
+            }
+        ];
+
+        function renderProducts(category) {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+
+            const filtered = category === 'all' ? allProducts : allProducts.filter(p => p.cat === category);
+
+            if(filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-full py-20 text-center text-slate-400 font-medium">Hiện chưa có sản phẩm trong danh mục này.</div>`;
+                return;
+            }
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-[2.5rem] p-6 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col";
+                card.innerHTML = `
+                    <div class="h-44 bg-slate-50 rounded-[2rem] flex items-center justify-center mb-6 group-hover:scale-105 transition duration-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+                        <i class="fas ${p.icon} text-6xl text-slate-300 group-hover:text-primary transition duration-500"></i>
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <span class="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-2 block">${p.cat}</span>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 leading-tight">${p.name}</h3>
+                        <p class="text-slate-400 text-xs line-clamp-2 mb-4 leading-relaxed">${p.desc}</p>
+                    </div>
+                    <div class="mt-4">
+                        <button onclick="showProductDetail(${p.id})" class="w-full py-4 bg-slate-900 text-white rounded-2xl font-bold text-sm hover:bg-primary transition shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2">
+                            Xem các sản phẩm <i class="fas fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterProducts(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.classList.remove('bg-white', 'text-primary', 'shadow-sm');
+                b.classList.add('text-slate-500');
+            });
+            btn.classList.add('bg-white', 'text-primary', 'shadow-sm');
+            btn.classList.remove('text-slate-500');
+            renderProducts(category);
+        }
+
+        function showProductDetail(productId) {
+            const product = allProducts.find(p => p.id === productId);
+            const modal = document.getElementById('product-modal');
+            const container = document.getElementById('modal-container');
+
+            let contentHtml = '';
+
+            if (product.sections) {
+                // Render for unified ChatGPT with multiple sections
+                contentHtml = product.sections.map(section => {
+                    const variants = section.variants.map(v => `
+                        <div class="flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-blue-50 border border-transparent hover:border-blue-200 transition group cursor-pointer" onclick="selectVariant('${v.label}', '${v.price}')">
+                            <div class="pr-4">
+                                <p class="font-bold text-slate-800 text-sm">${v.label}</p>
+                                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest mt-1">Gói Premium</p>
+                            </div>
+                            <div class="text-right flex-shrink-0">
+                                <p class="text-primary font-black text-lg whitespace-nowrap">${v.price}</p>
+                                <button class="text-[10px] bg-white border border-slate-200 px-3 py-1 rounded-full font-bold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition">Chọn</button>
+                            </div>
+                        </div>
+                    `).join('');
+
+                    const notes = section.notes.map(note => `
+                        <li class="flex gap-2 items-start text-xs text-slate-600 mb-2">
+                            <i class="fas fa-check-circle text-primary text-[10px] mt-1"></i>
+                            <span>${note}</span>
+                        </li>
+                    `).join('');
+
+                    return `
+                        <div class="mb-10">
+                            <h4 class="text-sm font-black text-slate-900 border-l-4 border-primary pl-3 mb-4">${section.title}</h4>
+                            <div class="bg-blue-50/40 p-4 rounded-2xl mb-6 border border-blue-100">
+                                <ul class="list-none">${notes}</ul>
+                            </div>
+                            <div class="space-y-3">${variants}</div>
+                        </div>
+                    `;
+                }).join('');
+            } else {
+                // Standard single section view
+                const variants = product.variants.map(v => `
+                    <div class="flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-blue-50 border border-transparent hover:border-blue-200 transition group cursor-pointer" onclick="selectVariant('${v.label}', '${v.price}')">
+                        <div class="pr-4">
+                            <p class="font-bold text-slate-800 text-sm">${v.label}</p>
+                            <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest mt-1">Gói Premium</p>
+                        </div>
+                        <div class="text-right flex-shrink-0">
+                            <p class="text-primary font-black text-lg whitespace-nowrap">${v.price}</p>
+                            <button class="text-[10px] bg-white border border-slate-200 px-3 py-1 rounded-full font-bold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition">Chọn</button>
+                        </div>
+                    </div>
+                `).join('');
+                contentHtml = `<div class="space-y-3">${variants}</div>`;
+            }
+
+            container.innerHTML = `
+                <div class="p-8 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center flex-shrink-0">
+                            <i class="fas ${product.icon} text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-black text-slate-900">${product.name}</h3>
+                            <p class="text-xs text-slate-500 font-medium italic">Bảng giá chi tiết & Chính sách sử dụng</p>
+                        </div>
+                    </div>
+                    <button onclick="closeModal()" class="w-10 h-10 rounded-full hover:bg-slate-200 flex items-center justify-center transition flex-shrink-0">
+                        <i class="fas fa-times text-slate-400"></i>
+                    </button>
+                </div>
+                <div class="p-8 max-h-[75vh] overflow-y-auto">
+                    ${contentHtml}
+                </div>
+                <div class="p-8 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-slate-400 text-[10px] italic font-bold">
+                        <i class="fas fa-shield-alt"></i> Bảo hành trọn gói hiệu lực 100%
+                    </div>
+                    <button onclick="closeModal()" class="text-sm font-black text-slate-500 hover:text-slate-900 transition">Quay lại</button>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('product-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function selectVariant(label, price) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').innerText = `Đã chọn: ${label} - ${price}`;
+            toast.classList.remove('hidden');
+            setTimeout(() => { toast.classList.add('hidden'); }, 3000);
+            closeModal();
+        }
+
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            content.classList.toggle('open');
+            icon.classList.toggle('fa-plus');
+            icon.classList.toggle('fa-minus');
+        }
+
+        window.onload = () => renderProducts('all');
+    </script>
+</body>
+</html>
