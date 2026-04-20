@@ -10,8 +10,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+        
+        body { 
+            font-family: 'Lora', serif; 
+            background-color: #f8fafc; 
+        }
+
         .gradient-text {
             background: linear-gradient(90deg, #2563eb, #7c3aed);
             -webkit-background-clip: text;
@@ -51,6 +56,7 @@
                 <div class="flex items-center gap-3">
                     <img src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/628033340_122096548239247617_6314601345223995563_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=6F7GqKiygL0Q7kNvwFRsUcC&_nc_oc=AdoYjRyYSsrgkAuaWOnPGiLd2ss9zuSWaFvb2YhyPbA7z2ls0Vh5uAX_Fj3GwUleX7A&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=8u1iTspMix-zgQ4DblqGBA&_nc_ss=7a3a8&oh=00_Af2lHLJ4VLytrxJBlGgqaiFCodsPnf0Dsj9wlPigbn45PA&oe=69EBE299" 
                          alt="Hyu Premium Shop Logo" 
+                         onerror="this.src='https://via.placeholder.com/42x42?text=HYU'"
                          class="site-logo shadow-sm">
                     <span class="font-bold text-xl tracking-tight text-slate-900">Hyu <span class="text-primary">Premium Shop</span></span>
                 </div>
@@ -78,7 +84,7 @@
                 <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
                     Trải Nghiệm <span class="gradient-text">ChatGPT Plus</span> <br/> Phân Khúc Đa Dạng
                 </h1>
-                <p class="text-lg text-slate-400 mb-10 leading-relaxed">
+                <p class="text-lg text-slate-400 mb-10 leading-relaxed italic">
                     Hyu Premium Shop cung cấp các giải pháp nâng cấp ChatGPT Plus và Business chính chủ, tối ưu chi phí theo nhu cầu sử dụng của bạn.
                 </p>
                 <div class="flex flex-wrap justify-center md:justify-start gap-4">
@@ -161,6 +167,7 @@
                 <div class="flex items-center justify-center md:justify-start gap-3 mb-6 text-white">
                     <img src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/628033340_122096548239247617_6314601345223995563_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=6F7GqKiygL0Q7kNvwFRsUcC&_nc_oc=AdoYjRyYSsrgkAuaWOnPGiLd2ss9zuSWaFvb2YhyPbA7z2ls0Vh5uAX_Fj3GwUleX7A&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=8u1iTspMix-zgQ4DblqGBA&_nc_ss=7a3a8&oh=00_Af2lHLJ4VLytrxJBlGgqaiFCodsPnf0Dsj9wlPigbn45PA&oe=69EBE299" 
                          alt="Hyu Premium Shop Footer Logo" 
+                         onerror="this.src='https://via.placeholder.com/40x40?text=HYU'"
                          class="h-10 w-auto rounded-lg">
                     <span class="font-bold text-xl text-white">Hyu <span class="text-primary">Premium Shop</span></span>
                 </div>
@@ -220,125 +227,76 @@
     </div>
 
     <script>
+        // Đường dẫn ảnh chung cho tất cả sản phẩm
+        const globalImg = "https://tintuc-divineshop.cdn.vccloud.vn/wp-content/uploads/2025/05/unnamed.png";
+
         const allProducts = [
+            // AI Category
             { 
-                id: 1, 
-                name: "ChatGPT", 
-                cat: "AI", 
-                icon: "fa-robot",
+                id: 1, name: "ChatGPT", cat: "AI", icon: "fa-robot", image: globalImg,
                 desc: "Gói cao cấp từ OpenAI. Bao gồm phân khúc ChatGPT Plus và Plus Business (Pro model).",
-                isTiered: true, // Custom flag to handle unified view
+                isTiered: true, 
                 sections: [
                     {
-                        title: "I. ChatGPT Plus - Giá gốc 500k trên app",
-                        notes: [
-                            "1 & 2: Hết tháng cấp tài khoản mới, tài khoản cũ về free & không gia hạn thêm.",
-                            "3: Bảo hành trọn vẹn hiệu lực gói nhưng không bảo hành tài khoản."
-                        ],
-                        variants: [
-                            { label: "1. Dùng chung (Shared Account)", price: "60.000đ/tháng" },
-                            { label: "2. Dùng riêng (Đăng nhập tự do, đổi pass)", price: "100.000đ/tháng" },
-                            { label: "3. Nâng cấp chính chủ (Chưa từng có Plus)", price: "150.000đ/tháng" },
-                            { label: "3. Nâng cấp chính chủ (Đã từng có Plus)", price: "250.000đ/tháng" },
-                            { label: "Mua liền tháng 2 & 3", price: "240.000đ/tháng" },
-                            { label: "Mua liền từ tháng thứ 4", price: "225.000đ/tháng" }
-                        ]
-                    },
-                    {
-                        title: "II. ChatGPT Plus Business - Có model Pro 5 (Gốc 640k)",
-                        notes: [
-                            "Hết tháng tự mất lịch sử chat có trong thời gian sử dụng gói này.",
-                            "Lịch sử chat trước đó (nếu có) không bị mất."
-                        ],
-                        variants: [
-                            { label: "Nâng cấp chính chủ tháng đầu", price: "300.000đ/tháng" },
-                            { label: "Mua liền tháng 2 & 3", price: "270.000đ/tháng" },
-                            { label: "Mua liền từ tháng thứ 4", price: "250.000đ/tháng" }
-                        ]
+                        title: "I. ChatGPT Plus",
+                        notes: ["Sử dụng model GPT-4o mới nhất.", "Bảo hành trọn vẹn hiệu lực gói."],
+                        variants: [{ label: "Nâng cấp chính chủ", price: "150.000đ/tháng" }]
                     }
                 ]
             },
-            { 
-                id: 2, name: "Cursor Pro", cat: "AI", icon: "fa-code",
-                desc: "Editor AI mạnh mẽ nhất cho lập trình viên chuyên nghiệp.",
-                variants: [
-                    { label: "Gói Pro 1 tháng", price: "450.000đ" },
-                    { label: "Gói Pro 1 năm", price: "3.000.000đ" }
-                ]
-            },
-            { 
-                id: 11, name: "Perplexity Pro", cat: "AI", icon: "fa-search",
-                desc: "Tìm kiếm AI thông minh nhất hiện nay.",
-                variants: [
-                    { label: "Gói Pro 1 tháng", price: "450.000đ" },
-                    { label: "Gói Pro 1 năm", price: "4.500.000đ" }
-                ]
-            },
-            { 
-                id: 12, name: "Super Grok", cat: "AI", icon: "fa-x-twitter",
-                desc: "AI tích hợp mạng xã hội X với tốc độ xử lý tức thì.",
-                variants: [
-                    { label: "Gói Premium 1 tháng", price: "300.000đ" },
-                    { label: "Gói Premium+ 1 tháng", price: "500.000đ" }
-                ]
-            },
-            { 
-                id: 13, name: "Gemini Pro", cat: "AI", icon: "fa-google",
-                desc: "Google One AI Pro với 2TB lưu trữ và Gemini Advanced.",
-                variants: [
-                    { label: "Gia hạn 1 tháng", price: "200.000đ" },
-                    { label: "Gia hạn 1 năm", price: "1.200.000đ" }
-                ]
-            },
-            { 
-                id: 15, name: "Elevenlabs", cat: "AI", icon: "fa-microphone-lines",
-                desc: "Chuyển đổi văn bản thành giọng nói chân thực.",
-                variants: [
-                    { label: "Gói Starter", price: "200.000đ" },
-                    { label: "Gói Creator", price: "550.000đ" }
-                ]
-            },
-            { 
-                id: 16, name: "KlingAI", cat: "AI", icon: "fa-film",
-                desc: "Tạo video AI chất lượng cao từ text.",
-                variants: [
-                    { label: "Gói Standard", price: "350.000đ" },
-                    { label: "Gói Pro", price: "850.000đ" }
-                ]
-            },
-            { 
-                id: 17, name: "Suno", cat: "AI", icon: "fa-music",
-                desc: "Sáng tác nhạc AI chỉ trong vài giây.",
-                variants: [
-                    { label: "Gói Pro", price: "250.000đ" },
-                    { label: "Gói Premier", price: "650.000đ" }
-                ]
-            },
-            { 
-                id: 3, name: "Canva Pro", cat: "Design", icon: "fa-paint-brush",
-                desc: "Thiết kế đồ họa chuyên nghiệp dễ dàng.",
-                variants: [
-                    { label: "Nâng cấp 1 tháng", price: "25.000đ" },
-                    { label: "Gói 1 năm", price: "99.000đ" },
-                    { label: "Vĩnh viễn", price: "299.000đ" }
-                ]
-            },
-            { 
-                id: 4, name: "Duolingo Max", cat: "Study", icon: "fa-language",
-                desc: "Học ngoại ngữ với sự trợ giúp của AI.",
-                variants: [
-                    { label: "Super 1 năm", price: "390.000đ" },
-                    { label: "Max 1 năm", price: "649.000đ" }
-                ]
-            },
-            { 
-                id: 6, name: "Netflix 4K", cat: "Entertainment", icon: "fa-film",
-                desc: "Xem phim chất lượng cao nhất.",
-                variants: [
-                    { label: "Xem chung 1 tháng", price: "65.000đ" },
-                    { label: "Gói riêng 1 tháng", price: "260.000đ" }
-                ]
-            }
+            { id: 2, name: "Cursor Pro", cat: "AI", icon: "fa-code", image: globalImg, desc: "AI lập trình hàng đầu cho Developer.", variants: [{ label: "Gói 1 tháng", price: "450.000đ" }] },
+            { id: 3, name: "Perplexity Pro", cat: "AI", icon: "fa-search", image: globalImg, desc: "Tìm kiếm AI thông minh.", variants: [{ label: "Gói 1 tháng", price: "450.000đ" }] },
+            { id: 4, name: "Super Grok", cat: "AI", icon: "fa-bolt", image: globalImg, desc: "AI tích hợp mạng xã hội X.", variants: [{ label: "Premium 1 tháng", price: "300.000đ" }] },
+            { id: 5, name: "Gemini Pro", cat: "AI", icon: "fa-google", image: globalImg, desc: "AI mạnh nhất từ Google.", variants: [{ label: "Gói 1 tháng", price: "200.000đ" }] },
+
+            // Design Category
+            { id: 6, name: "Canva Pro", cat: "Design", icon: "fa-paint-brush", image: globalImg, desc: "Thiết kế đồ họa chuyên nghiệp.", variants: [{ label: "1 Năm", price: "99.000đ" }] },
+            { id: 7, name: "Adobe Full Apps", cat: "Design", icon: "fa-palette", image: globalImg, desc: "Trọn bộ 20+ ứng dụng Adobe.", variants: [{ label: "1 Năm chính chủ", price: "990.000đ" }] },
+            { id: 8, name: "CapCut Pro", cat: "Design", icon: "fa-video", image: globalImg, desc: "Biên tập video chuyên nghiệp.", variants: [{ label: "1 Năm", price: "350.000đ" }] },
+            { id: 9, name: "Figma Pro", cat: "Design", icon: "fa-figma", image: globalImg, desc: "Thiết kế UI/UX cộng tác.", variants: [{ label: "Gói Edu 1 năm", price: "190.000đ" }] },
+            { id: 10, name: "Envato Elements", cat: "Design", icon: "fa-layer-group", image: globalImg, desc: "Kho tài nguyên đồ họa vô tận.", variants: [{ label: "1 Tháng", price: "120.000đ" }] },
+
+            // Study Category
+            { id: 11, name: "Duolingo Super", cat: "Study", icon: "fa-language", image: globalImg, desc: "Học ngoại ngữ không giới hạn.", variants: [{ label: "1 Năm", price: "390.000đ" }] },
+            { id: 12, name: "Grammarly Premium", cat: "Study", icon: "fa-spell-check", image: globalImg, desc: "Kiểm tra ngữ pháp tiếng Anh.", variants: [{ label: "1 Năm", price: "450.000đ" }] },
+            { id: 13, name: "ELSA Speak", cat: "Study", icon: "fa-microphone", image: globalImg, desc: "Luyện phát âm AI.", variants: [{ label: "Vĩnh viễn", price: "1.250.000đ" }] },
+            { id: 14, name: "Quizlet Plus", cat: "Study", icon: "fa-book-open", image: globalImg, desc: "Flashcard học tập thông minh.", variants: [{ label: "1 Năm", price: "250.000đ" }] },
+            { id: 15, name: "Coursera Plus", cat: "Study", icon: "fa-graduation-cap", image: globalImg, desc: "Chứng chỉ từ đại học danh tiếng.", variants: [{ label: "1 Năm", price: "1.900.000đ" }] },
+
+            // Work Category
+            { id: 16, name: "Office 365", cat: "Work", icon: "fa-file-word", image: globalImg, desc: "Bộ công cụ văn phòng Microsoft.", variants: [{ label: "1 Năm + 1TB OneDrive", price: "250.000đ" }] },
+            { id: 17, name: "Zoom Pro", cat: "Work", icon: "fa-video-camera", image: globalImg, desc: "Họp trực tuyến không giới hạn.", variants: [{ label: "1 Tháng", price: "150.000đ" }] },
+            { id: 18, name: "Notion Plus", cat: "Work", icon: "fa-sticky-note", image: globalImg, desc: "Ghi chú và quản lý dự án.", variants: [{ label: "1 Năm", price: "300.000đ" }] },
+            { id: 19, name: "Slack Pro", cat: "Work", icon: "fa-slack", image: globalImg, desc: "Trao đổi công việc nội bộ.", variants: [{ label: "1 Tháng", price: "100.000đ" }] },
+            { id: 20, name: "Trello Gold", cat: "Work", icon: "fa-trello", image: globalImg, desc: "Quản lý công việc Kanban.", variants: [{ label: "1 Năm", price: "200.000đ" }] },
+
+            // Entertainment Category
+            { id: 21, name: "Netflix 4K", cat: "Entertainment", icon: "fa-film", image: globalImg, desc: "Phim bản quyền chất lượng cao.", variants: [{ label: "1 Tháng", price: "65.000đ" }] },
+            { id: 22, name: "YouTube Premium", cat: "Entertainment", icon: "fa-youtube", image: globalImg, desc: "Xem không quảng cáo.", variants: [{ label: "1 Năm", price: "350.000đ" }] },
+            { id: 23, name: "Spotify Premium", cat: "Entertainment", icon: "fa-music", image: globalImg, desc: "Nghe nhạc chất lượng cao.", variants: [{ label: "1 Năm chính chủ", price: "290.000đ" }] },
+            { id: 24, name: "Disney+", cat: "Entertainment", icon: "fa-clapperboard", image: globalImg, desc: "Phim hoạt hình và Marvel.", variants: [{ label: "1 Năm", price: "350.000đ" }] },
+            { id: 25, name: "Hulu", cat: "Entertainment", icon: "fa-tv", image: globalImg, desc: "Truyền hình trực tuyến Mỹ.", variants: [{ label: "1 Tháng", price: "120.000đ" }] },
+
+            // VPN Category
+            { id: 26, name: "NordVPN", cat: "VPN", icon: "fa-shield", image: globalImg, desc: "Bảo mật internet hàng đầu.", variants: [{ label: "1 Năm", price: "450.000đ" }] },
+            { id: 27, name: "Surfshark", cat: "VPN", icon: "fa-water", image: globalImg, desc: "VPN không giới hạn thiết bị.", variants: [{ label: "1 Năm", price: "350.000đ" }] },
+            { id: 28, name: "ExpressVPN", cat: "VPN", icon: "fa-bolt", image: globalImg, desc: "Tốc độ nhanh nhất thế giới.", variants: [{ label: "1 Tháng", price: "200.000đ" }] },
+            { id: 29, name: "WARP+ 1.1.1.1", cat: "VPN", icon: "fa-cloud", image: globalImg, desc: "Tăng tốc internet di động.", variants: [{ label: "Gói Data vô tận", price: "50.000đ" }] },
+            { id: 30, name: "Windscribe", cat: "VPN", icon: "fa-wind", image: globalImg, desc: "VPN tùy chỉnh linh hoạt.", variants: [{ label: "1 Năm", price: "290.000đ" }] },
+
+            // Game Category
+            { id: 31, name: "Xbox Game Pass", cat: "Game", icon: "fa-xbox", image: globalImg, desc: "Kho game khổng lồ từ Microsoft.", variants: [{ label: "1 Tháng Ultimate", price: "150.000đ" }] },
+            { id: 32, name: "Steam Wallet", cat: "Game", icon: "fa-steam", image: globalImg, desc: "Nạp tiền mua game Steam.", variants: [{ label: "Nạp hộ trực tiếp", price: "Theo tỷ giá" }] },
+            { id: 33, name: "PlayStation Plus", cat: "Game", icon: "fa-playstation", image: globalImg, desc: "Dịch vụ chơi mạng Sony.", variants: [{ label: "1 Năm Essential", price: "990.000đ" }] },
+            { id: 34, name: "Nintendo Online", cat: "Game", icon: "fa-gamepad", image: globalImg, desc: "Dịch vụ cho Switch.", variants: [{ label: "1 Năm Family", price: "150.000đ" }] },
+            { id: 35, name: "Discord Nitro", cat: "Game", icon: "fa-discord", image: globalImg, desc: "Nâng cấp tính năng chat.", variants: [{ label: "1 Năm Full", price: "950.000đ" }] },
+
+            // Social Category
+            { id: 36, name: "Telegram Premium", cat: "Social", icon: "fa-paper-plane", image: globalImg, desc: "Nâng cấp tính năng Telegram.", variants: [{ label: "1 Năm", price: "650.000đ" }] },
+            { id: 37, name: "Facebook Ads", cat: "Social", icon: "fa-facebook", image: globalImg, desc: "Dịch vụ quảng cáo FB.", variants: [{ label: "Gói hỗ trợ", price: "Liên hệ" }] },
+            { id: 38, name: "TikTok Ads", cat: "Social", icon: "fa-tiktok", image: globalImg, desc: "Quảng cáo TikTok thị trường.", variants: [{ label: "Mở tài khoản BC", price: "100.000đ" }] },
+            { id: 39, name: "Twitter (X) Blue", cat: "Social", icon: "fa-x-twitter", image: globalImg, desc: "Dấu tích xanh tài khoản X.", variants: [{ label: "1 Năm", price: "2.500.000đ" }] },
+            { id: 40, name: "Tinder Gold", cat: "Social", icon: "fa-heart", image: globalImg, desc: "Dịch vụ hẹn hò cao cấp.", variants: [{ label: "6 Tháng", price: "450.000đ" }] }
         ];
 
         function renderProducts(category) {
@@ -355,15 +313,21 @@
             filtered.forEach(p => {
                 const card = document.createElement('div');
                 card.className = "bg-white rounded-[2.5rem] p-6 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group flex flex-col";
+                
+                // UX: Responsive image fill with object-cover and hover scale
+                const mediaContent = p.image 
+                    ? `<img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 relative z-10">`
+                    : `<i class="fas ${p.icon} text-6xl text-slate-300 group-hover:text-primary transition duration-500"></i>`;
+
                 card.innerHTML = `
-                    <div class="h-44 bg-slate-50 rounded-[2rem] flex items-center justify-center mb-6 group-hover:scale-105 transition duration-500 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
-                        <i class="fas ${p.icon} text-6xl text-slate-300 group-hover:text-primary transition duration-500"></i>
+                    <div class="h-44 bg-slate-50 rounded-[2rem] flex items-center justify-center mb-6 group-hover:scale-[1.02] transition duration-500 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent z-20 pointer-events-none"></div>
+                        ${mediaContent}
                     </div>
                     <div class="flex-grow text-center md:text-left">
                         <span class="text-[10px] font-black uppercase tracking-[0.2em] text-primary mb-2 block">${p.cat}</span>
                         <h3 class="text-xl font-bold text-slate-900 mb-2 leading-tight">${p.name}</h3>
-                        <p class="text-slate-400 text-xs line-clamp-2 mb-4 leading-relaxed">${p.desc}</p>
+                        <p class="text-slate-400 text-xs line-clamp-2 mb-4 leading-relaxed italic">${p.desc}</p>
                     </div>
                     <div class="mt-4">
                         <button onclick="showProductDetail(${p.id})" class="w-full py-4 bg-slate-900 text-white rounded-2xl font-bold text-sm hover:bg-primary transition shadow-lg hover:shadow-primary/30 flex items-center justify-center gap-2">
@@ -393,7 +357,6 @@
             let contentHtml = '';
 
             if (product.sections) {
-                // Render for unified ChatGPT with multiple sections
                 contentHtml = product.sections.map(section => {
                     const variants = section.variants.map(v => `
                         <div class="flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-blue-50 border border-transparent hover:border-blue-200 transition group cursor-pointer" onclick="selectVariant('${v.label}', '${v.price}')">
@@ -426,7 +389,6 @@
                     `;
                 }).join('');
             } else {
-                // Standard single section view
                 const variants = product.variants.map(v => `
                     <div class="flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-blue-50 border border-transparent hover:border-blue-200 transition group cursor-pointer" onclick="selectVariant('${v.label}', '${v.price}')">
                         <div class="pr-4">
@@ -445,8 +407,8 @@
             container.innerHTML = `
                 <div class="p-8 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center flex-shrink-0">
-                            <i class="fas ${product.icon} text-primary text-xl"></i>
+                        <div class="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center flex-shrink-0 overflow-hidden border">
+                            ${product.image ? `<img src="${product.image}" class="w-full h-full object-cover">` : `<i class="fas ${product.icon} text-primary text-xl"></i>`}
                         </div>
                         <div>
                             <h3 class="text-xl font-black text-slate-900">${product.name}</h3>
