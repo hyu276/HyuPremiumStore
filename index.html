@@ -281,7 +281,41 @@
             { id: 5, name: "Gemini Pro", cat: "AI", icon: "fa-google", image: defaultPlaceholder, desc: "AI mạnh nhất từ Google.", variants: [{ label: "Gói 1 tháng", price: "200.000đ" }] },
 
             // Design Category
-            { id: 6, name: "Canva Pro", cat: "Design", icon: "fa-paint-brush", image: defaultPlaceholder, desc: "Thiết kế đồ họa chuyên nghiệp.", variants: [{ label: "1 Năm", price: "99.000đ" }] },
+            { 
+                id: 1, name: "Canva", cat: "Design", icon: "fa-robot", 
+                image: "https://static.vecteezy.com/system/resources/previews/024/558/807/non_2x/openai-chatgpt-logo-icon-free-png.png",
+                desc: "Gói cao cấp từ OpenAI. Bao gồm phân khúc ChatGPT Plus và Plus Business (Pro model).",
+                isTiered: true, 
+                sections: [
+                    {
+                        title: "I. Canva Pro Edu",
+                        notes: [
+                            "Loại này có đầy đủ chức năng Pro, trừ chức năng đăng tải font chữ, Brand Kit và tạo video AI"
+                        ],
+                        variants: [
+                            { label: "1. 1 tháng", price: "60.000đ/tháng" },
+                            { label: "2. 2 tháng", price: "100.000đ/tháng" },
+                            { label: "3. 3 tháng", price: "150.000đ/tháng" },
+                            { label: "4. 6 tháng", price: "250.000đ/tháng" },
+                            { label: "5. 1 năm, price: "240.000đ/tháng" },
+                            { label: "6. 3 năm", price: "225.000đ/tháng" }
+                            { label: "7. Vĩnh viễn - Bảo hành 3 năm đầu", price: "225.000đ/tháng" }
+                        ]
+                    },
+                    {
+                        title: "II. ChatGPT Plus Business - Có model Pro 5 (Giá gốc 640k)",
+                        notes: [
+                            "Hết tháng sẽ tự mất lịch sử chat có trong thời gian sử dụng gói này.",
+                            "Lịch sử chat trước đó (nếu có) không bị mất."
+                        ],
+                        variants: [
+                            { label: "Nâng cấp chính chủ tháng đầu", price: "300.000đ/tháng" },
+                            { label: "Mua liền tháng thứ 2 và 3", price: "270.000đ/tháng" },
+                            { label: "Mua liền từ tháng thứ 4 trở đi", price: "250.000đ/tháng" }
+                        ]
+                    }
+                ]
+            }
             { id: 7, name: "Adobe Full Apps", cat: "Design", icon: "fa-palette", image: defaultPlaceholder, desc: "Trọn bộ 20+ ứng dụng Adobe.", variants: [{ label: "1 Năm chính chủ", price: "990.000đ" }] },
             { id: 8, name: "CapCut Pro", cat: "Design", icon: "fa-video", image: defaultPlaceholder, desc: "Biên tập video chuyên nghiệp.", variants: [{ label: "1 Năm", price: "350.000đ" }] },
             { id: 9, name: "Figma Pro", cat: "Design", icon: "fa-figma", image: defaultPlaceholder, desc: "Thiết kế UI/UX cộng tác.", variants: [{ label: "Gói Edu 1 năm", price: "190.000đ" }] },
